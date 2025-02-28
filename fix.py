@@ -13,7 +13,7 @@ def setting_browser():
 def test_first(setting_browser):
     browser.open("https://www.google.com/")
     browser.element('[name="q"]').should(be.blank).type('https://www.skype.com').press_enter()
-    browser.element('html').should(have.text('Отличная видеосвязь'))
+    browser.element('html').should(have.text('BLOG'))
 
 def test_second(setting_browser):
     browser.open("https://www.google.com/")
@@ -27,5 +27,5 @@ def test_second_one(setting_browser):
 
 def test_third(setting_browser):
     browser.open("https://www.google.com/")
-    browser.element('[name="q"]').should(be.blank).type('skype.com').press_enter()
+    browser.element('[name="q"]').should(be.blank).type('https://www.skype.com').press_enter()
     browser.element('html').should(have.text('Об этой странице'))
